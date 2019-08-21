@@ -1,0 +1,11 @@
+<mat-card>
+  <mat-card-title>{{ (item | async)?.name }}</mat-card-title>
+  <mat-card-subtitle>{{ (item | async)?.description }}</mat-card-subtitle>
+  <mat-card-content>
+    <h3>bids:</h3>
+    <div *ngFor="let bid of (item | async)?.bids">
+      <p>{{ bid.user }}</p>
+      <p>{{ bid.amount }}</p>
+    </div>
+  </mat-card-content>
+</mat-card>
